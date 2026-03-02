@@ -254,7 +254,7 @@ BioAttend/
 
 **Dikshak Bobade**
 - GitHub: [@dikshakbobade](https://github.com/dikshakbobade)
-- B.Tech Information Technology, VIT Pune (CGPA: 9.02)
+- B.Tech Data Science
 
 ---
 
