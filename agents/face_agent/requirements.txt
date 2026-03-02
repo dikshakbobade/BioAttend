@@ -1,0 +1,18 @@
+# Face Recognition Agent Dependencies
+# Install: pip install -r requirements.txt
+
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+httpx>=0.25.0
+
+# Face recognition (InsightFace)
+insightface>=0.7.3
+onnxruntime>=1.16.0  # CPU inference
+# onnxruntime-gpu>=1.16.0  # Uncomment for GPU support
+
+# Optional: For better camera support
+# opencv-contrib-python>=4.8.0
+
+# Development
+python-dotenv>=1.0.0

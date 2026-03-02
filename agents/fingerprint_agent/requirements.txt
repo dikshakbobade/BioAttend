@@ -1,0 +1,45 @@
+# Fingerprint Agent Dependencies
+# Install: pip install -r requirements.txt
+
+# Core dependencies
+httpx>=0.25.0
+numpy>=1.24.0
+
+# Development
+python-dotenv>=1.0.0
+
+# =============================================================================
+# VENDOR SDK INSTALLATION (Choose one based on your hardware)
+# =============================================================================
+
+# Mantra MFS100:
+# 1. Download from: https://download.mantratecapp.com/
+# 2. Install: sudo dpkg -i MFS100-*.deb
+# 3. Python bindings may need manual installation
+
+# SecuGen Hamster Pro:
+# 1. Download FDx SDK Pro from SecuGen website
+# 2. Extract and run install script
+# 3. pip install pysgfplib (if available) or use ctypes bindings
+
+# ZKTeco ZK4500/ZK9500:
+# 1. Download ZKFinger SDK
+# 2. Install libzkfp.so to /usr/lib
+# 3. Use ctypes bindings (included in agent.py)
+
+# =============================================================================
+# USB PERMISSIONS (Linux)
+# =============================================================================
+# Create udev rule: /etc/udev/rules.d/99-fingerprint.rules
+#
+# For Mantra MFS100:
+# SUBSYSTEM=="usb", ATTR{idVendor}=="1c7a", ATTR{idProduct}=="0603", MODE="0666"
+#
+# For SecuGen:
+# SUBSYSTEM=="usb", ATTR{idVendor}=="1162", MODE="0666"
+#
+# For ZKTeco:
+# SUBSYSTEM=="usb", ATTR{idVendor}=="6997", MODE="0666"
+#
+# Reload rules: sudo udevadm control --reload-rules && sudo udevadm trigger
+# =============================================================================
